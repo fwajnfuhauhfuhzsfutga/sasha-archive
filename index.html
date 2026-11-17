@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#151515"><title>Саша Кривенко · Саша.Архив</title>
+<link rel="stylesheet" href="style.css"></head>
+<body><div class="page">
+<header>
+  <a class="logo" href="#profile">саша<span>.архив</span></a>
+  <nav aria-label="Разделы архива"><a href="#profile">Профиль</a><a href="#photos">Фотоплёнка</a><a href="#video">Видео</a><a href="#comments">Комментарии</a></nav>
+  <div class="summary"><a href="#photos">Все фотографии</a>Личный архив <strong>Саши Кривенко</strong><br><span>6 фотографий · 1 видео</span></div>
+</header>
+<main>
+  <section id="profile"><h1>Профиль: Саша Кривенко</h1>
+    <div class="profile-content">
+      <button class="avatar" data-file="chicken" aria-label="Открыть фото улыбающейся курицы"><img src="media/chicken.png" alt=""><span>Саша в эфире</span></button>
+      <dl><dt>Имя</dt><dd>Саша Кривенко</dd><dt>Звание</dt><dd>Лучший друг</dd><dt>Фотографии</dt><dd><a href="#photos">6 кадров</a></dd><dt>Видео</dt><dd><a href="#video">1 запись</a></dd><dt>О Саше</dt><dd>С ним даже обычный созвон заслуживает отдельного фотоальбома 😂</dd><dt>Второй кадр</dt><dd><button class="second" data-file="4"><img src="media/4.png" alt="">Я тоже в кадре!</button></dd></dl>
+      <button class="link" id="shuffle">Открыть случайный кадр</button>
+    </div>
+  </section>
+  <section id="photos" hidden><h2>Фотоплёнка Саши (6)</h2><div class="grid" id="grid"></div></section>
+  <section id="video" hidden><h2>Видео из архива (1)</h2><div class="content"><video controls playsinline preload="metadata" aria-label="Видео из архива" src="media/video.mp4"></video></div></section>
+  <section id="comments"><h2>Комментарии (<span id="total">0</span>)</h2>
+    <div class="content"><form id="comment-form"><textarea aria-label="Текст комментария" required maxlength="1200" id="message"></textarea><button>Оставить комментарий</button></form>
+    <ul id="entries"></ul><p class="muted" id="note" aria-live="polite">Пока пусто. Комментарии сохраняются в этом браузере.</p></div>
+  </section>
+</main>
+<footer><span>саша.архив</span><a href="#photos">Фотоплёнка</a></footer>
+</div><dialog aria-labelledby="caption"><div class="viewer"><div class="bar"><strong id="count"></strong><button id="close" aria-label="Закрыть просмотр">×</button></div><img id="big" alt=""><div class="controls"><button id="prev" aria-label="Предыдущий кадр">←</button><strong id="caption" aria-live="polite"></strong><button id="next" aria-label="Следующий кадр">→</button></div></div></dialog>
+<script src="album.js"></script></body></html>
